@@ -1,0 +1,125 @@
+:root {
+    --avatar-gradient-a: linear-gradient(135deg, #667eea, #764ba2);
+    --avatar-gradient-b: linear-gradient(135deg, #f093fb, #f5576c);
+    --accent: #667eea;
+    --skill-tag-bg: #f0f0ff;
+    --dark-vard-bg: #1a1a2e;
+    --color-text: #1a1a2e;
+    --color-muted: #888888;
+    --radius-card: 16px;
+    --shadow-default: 0 4px 24px rgba(0, 0, 0, .08);
+    --shadow-hover: 0 12px 32px rgba(0,0,0,.12);
+    --transition: .2s ease;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #F2f2f2;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+
+.card-simple {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 32px 24px;
+    width: 400px;
+    text-align: center;
+    box-shadow: var(--shadow-default);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card-simple:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    transition-duration: 184ms;
+    transition-delay: 0ms;
+}
+
+.card-simple .avatar {
+    width: 88px;
+    height: 88px;
+    background: var(--avatar-gradient-a);
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.card-simple .name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.card-simple .role {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.card-simple .bio {
+    font-size: 13px;
+    color: var(--color-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+.card-simple .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.skill-tag {
+    background: var(--skill-tag-bg);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 100px;
+}
+
+.card-simple .cta-btn {
+    display: block;
+    width: 100%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 11px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: backgraund var(--transition), transform var(--transition);
+}
+
+
+.card-simple .cta-btn:hover {
+    background: #5a6fd6;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+    .card-simple {
+        width: 100%;
+    } 
+}
